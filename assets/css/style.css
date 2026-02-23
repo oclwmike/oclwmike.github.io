@@ -175,3 +175,30 @@ article {
 .back:hover {
   color: var(--text);
 }
+
+/* Language tag */
+
+.lang-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  border: 1px solid var(--muted);
+  border-radius: 2px;
+  padding: 0 0.25em;
+  opacity: 0.6;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+/* Chinese typography */
+
+:lang(zh) body,
+:lang(zh) .post-content {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Source Han Serif", Georgia, serif;
+  line-height: 1.9;
+}
+
+:lang(zh) .post-header h1 {
+  letter-spacing: 0.02em;
+}

@@ -8,6 +8,7 @@ layout: default
     <li>
       <time>{{ post.date | date: "%Y-%m-%d" }}</time>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if post.lang == "zh" %}<span class="lang-tag">中</span>{% endif %}
     </li>
     {% endfor %}
   </ul>
