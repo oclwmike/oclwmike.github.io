@@ -128,10 +128,42 @@ article {
   letter-spacing: -0.01em;
 }
 
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .post-header time {
   color: var(--muted);
   font-size: 0.8rem;
   font-family: var(--font-mono);
+}
+
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--muted);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.1em 0.5em;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.lang-toggle:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.lang-block.hidden {
+  display: none;
+}
+
+.lang-zh {
+  font-family: "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+  line-height: 1.9;
 }
 
 .post-content p {
@@ -191,14 +223,4 @@ article {
   top: -1px;
 }
 
-/* Chinese typography */
 
-:lang(zh) body,
-:lang(zh) .post-content {
-  font-family: "Noto Serif SC", "Source Han Serif SC", "Source Han Serif", Georgia, serif;
-  line-height: 1.9;
-}
-
-:lang(zh) .post-header h1 {
-  letter-spacing: 0.02em;
-}

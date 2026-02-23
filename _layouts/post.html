@@ -4,10 +4,45 @@ layout: default
 <article>
   <header class="post-header">
     <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+      {% if page.bilingual %}
+      <button class="lang-toggle" id="langToggle" onclick="toggleLang()">中文</button>
+      {% endif %}
+    </div>
   </header>
   <div class="post-content">
     {{ content }}
   </div>
 </article>
 <a href="{{ '/' | relative_url }}" class="back">← back</a>
+
+{% if page.bilingual %}
+<script>
+  function toggleLang() {
+    var en = document.querySelectorAll('.lang-en');
+    var zh = document.querySelectorAll('.lang-zh');
+    var btn = document.getElementById('langToggle');
+    var isEn = en[0] && !en[0].classList.contains('hidden');
+    en.forEach(function(el){ el.classList.toggle('hidden', isEn); });
+    zh.forEach(function(el){ el.classList.toggle('hidden', !isEn); });
+    btn.textContent = isEn ? 'English' : '中文';
+    localStorage.setItem('lang-pref', isEn ? 'zh' : 'en');
+  }
+  (function init() {
+    var pref = localStorage.getItem('lang-pref') || 'en';
+    var en = document.querySelectorAll('.lang-en');
+    var zh = document.querySelectorAll('.lang-zh');
+    var btn = document.getElementById('langToggle');
+    if (pref === 'zh') {
+      en.forEach(function(el){ el.classList.add('hidden'); });
+      zh.forEach(function(el){ el.classList.remove('hidden'); });
+      btn.textContent = 'English';
+    } else {
+      zh.forEach(function(el){ el.classList.add('hidden'); });
+      en.forEach(function(el){ el.classList.remove('hidden'); });
+      btn.textContent = '中文';
+    }
+  })();
+</script>
+{% endif %}
