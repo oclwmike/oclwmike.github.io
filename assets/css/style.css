@@ -59,19 +59,18 @@ nav .site-title:hover { text-decoration: underline; }
 
 .lang-toggle {
   background: none;
-  border: 1px solid var(--muted);
+  border: none;
   color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  padding: 0.15em 0.6em;
-  border-radius: 2px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 0;
   cursor: pointer;
-  transition: color 0.15s, border-color 0.15s;
+  text-decoration: none;
 }
 
 .lang-toggle:hover {
   color: var(--text);
-  border-color: var(--text);
+  text-decoration: underline;
 }
 
 /* Language visibility */
