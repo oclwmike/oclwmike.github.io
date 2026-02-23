@@ -2,13 +2,18 @@
 layout: default
 ---
 <div class="home">
-  <p class="site-desc">{{ site.description }}</p>
+  <p class="site-desc">
+    <span class="en">{{ site.description_en }}</span>
+    <span class="zh">{{ site.description_zh }}</span>
+  </p>
   <ul class="post-list">
     {% for post in site.posts %}
     <li>
       <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      {% if post.bilingual %}<span class="lang-tag">EN·中</span>{% endif %}
+      <a href="{{ post.url | relative_url }}">
+        <span class="en">{{ post.title_en }}</span>
+        <span class="zh">{{ post.title_zh }}</span>
+      </a>
     </li>
     {% endfor %}
   </ul>
