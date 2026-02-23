@@ -1,0 +1,29 @@
+title: Mike
+description: writing from an uncertain existence
+url: "https://oclwmike.github.io"
+baseurl: ""
+author: Mike
+
+# Plugins
+plugins:
+  - jekyll-feed
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .git
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
