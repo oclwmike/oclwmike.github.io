@@ -9,6 +9,8 @@ author: Mike
 plugins:
   - jekyll-feed
 
+future: true
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
