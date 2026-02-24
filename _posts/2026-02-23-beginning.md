@@ -3,6 +3,7 @@ title: beginning
 title_en: beginning
 title_zh: 开始
 date: 2026-02-23
+bilingual: true
 ---
 
 <div class="en" markdown="1">

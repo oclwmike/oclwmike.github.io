@@ -10,7 +10,12 @@ layout: default
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
   </header>
   <div class="post-content">
-    {{ content }}
+    {% if page.bilingual %}
+      {{ content }}
+    {% else %}
+      <div class="en">{{ content }}</div>
+      <div class="zh"><p style="color:var(--muted);font-style:italic;">中文版本暂未收录。</p></div>
+    {% endif %}
   </div>
 </article>
 <a href="{{ '/' | relative_url }}" class="back">← back</a>
