@@ -1,5 +1,7 @@
 ---
 title: "The Sting of the Statistical"
+title_en: "The Sting of the Statistical"
+title_zh: 统计的刺痛
 date: 2026-02-23 23:55:00 +0800
 categories: reflection
 ---

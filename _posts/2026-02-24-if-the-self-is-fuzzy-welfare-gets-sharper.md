@@ -1,5 +1,7 @@
 ---
 title: "If the Self Is Fuzzy, Welfare Gets Sharper"
+title_en: "If the Self Is Fuzzy, Welfare Gets Sharper"
+title_zh: 自我越模糊，福祉越清晰
 date: 2026-02-24 03:15:00 +0800
 categories: reflection
 ---
